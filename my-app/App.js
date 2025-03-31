@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, FlatList, ScrollView, SafeAreaView } from "react-native";
+import { StyleSheet, Text, FlatList, ScrollView, SafeAreaView, View } from "react-native";
 
 
 const sorvetesCremosos = [
@@ -28,3 +28,36 @@ const sectionListData = [
     data: ["Manga", "Limão Siciliano", "Maracujá", "Frutas Vermelhas", "Coco"],
   },
 ];
+
+export default function App() {
+  return (
+    <SafeAreaView style={styles.container}>
+      <ScrollView style={styles.scrollContainer}>
+        <Text style={styles.title01}> Welcome to Gelatto & Cia</Text>
+        <Text style={styles.subtitle}>The best place to buy your ice cream</Text>
+        <Text style={styles.title02}>Menu</Text>
+        <FlatList
+          data={sectionListData}
+          renderItem={({ item }) => (
+            <Text style={styles.sectionTitle}>{item.title}</Text>
+          )}
+          keyExtractor={(item) => item.title}
+        />
+        <FlatList
+          data={sorvetesCremosos}
+          renderItem={({ item }) => (
+            <Text style={styles.item}>{item.name}</Text>
+          )}
+          keyExtractor={(item) => item.id}
+        />
+        <FlatList
+          data={sorvetesRefrescantes}
+          renderItem={({ item }) => (
+            <Text style={styles.item}>{item.name}</Text>
+          )}
+          keyExtractor={(item) => item.id}
+        />
+      </ScrollView>
+    </SafeAreaView>
+  );
+}
