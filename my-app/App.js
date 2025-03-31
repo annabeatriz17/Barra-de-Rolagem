@@ -1,4 +1,5 @@
 import React from "react";
+import { StyleSheet, Text, View, FlatList, ScrollView, SafeAreaView } from "react-native";
 
 
 const sorvetesCremosos = [
