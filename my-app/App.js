@@ -1,20 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+const sorvetesCremosos = [
+  { id: "1", name: "Chocolate Belga" },
+  { id: "2", name: "Pisache" },
+  { id: "3", name: "Cookies & Cream" },
+  { id: "4", name: "Baunilha de Madagascar" },
+  { id: "5", name: "Napolitano" },
+];
+
+const sorvetesRefrescantes = [
+  { id: "1", name: "Manga" },
+  { id: "2", name: "Limão Siciliano" },
+  { id: "3", name: "Maracujá" },
+  { id: "4", name: "Frutas Vermelhas" },
+  { id: "5", name: "Coco" },
+];
+
+const sectionListData = [
+  {
+    title: "Sorvetes Cremosos",
+    data: ["Chcolate Belga", "Pisache", "Cookies & Cream", "Baunilha de Madagascar", "Napolitano"],
   },
-});
+  {
+    title: "Sorvetes Refrescantes",
+    data: ["Manga", "Limão Siciliano", "Maracujá", "Frutas Vermelhas", "Coco"],
+  },
+];
